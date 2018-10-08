@@ -1,3 +1,9 @@
+.page-content
+  padding-bottom 20px
+
+.page-content__breadcrumbs
+  display none
+
 .page-content__header
   padding 32px 0 15px
   border-top 1px solid #999999
@@ -38,3 +44,98 @@
   &--current
     font-family "Montserrat Bold", serif, Arial
     color #0a0a0a
+
+.page-content__delete
+  width 62%
+  min-height 40px
+  padding 0
+  margin 0 auto
+  margin-bottom 50px
+  font-family "Montserrat SemiBold", serif, Arial
+  font-size 13px
+  font-weight 400
+  text-align center
+  text-decoration none
+  text-transform uppercase
+  color #7c2582
+  background-color transparent
+  display block
+  border 1px solid #7c2582
+  border-radius 20px
+  cursor pointer
+
+@media (min-width: $tablet)
+  .page-content__breadcrumbs
+    padding 0
+    margin 0
+    margin-bottom 50px
+    display flex
+    align-items center
+    list-style none
+
+  .page-content__breadcrumbs-item
+    padding-right 20px
+    margin-right 10px
+    position relative
+
+    &::before
+      content ""
+      width 10px
+      height 1px
+      position absolute
+      top 10px
+      right 0
+      background-color #0a0a0a
+
+    &:last-child::before
+      display none
+
+
+  .page-content__sorting-list
+    padding-left 0
+
+  .page-content__breadcrumbs-link
+    font-family "Montserrat Regular", serif, Arial
+    font-size 13px
+    font-weight 600
+    color #0a0a0a
+    text-decoration none
+
+    &--current
+      padding 0
+      margin 0
+      color #555555
+
+  .page-content__top-wrapper
+    width 100%
+    max-width 1170px
+    padding 0 2%
+    margin 0 auto
+    box-sizing border-box
+
+  .page-content__heading
+    margin-bottom 50px
+    font-size 34px
+    text-align left
+
+  .page-content__sorting-filter
+    font-size 15px
+
+  .page-content__delete
+    width 220px
+    margin 0
+    margin-bottom 67px
+
+  .page-content__bottom-wrapper
+    width 100%
+    max-width 1170px
+    padding 0 2%
+    margin 0 auto
+    box-sizing border-box
+
+@media (min-width: $desktop)
+  .page-content__top-wrapper
+    padding 0
+
+  .page-content__bottom-wrapper
+    padding 0
