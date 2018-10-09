@@ -4,12 +4,13 @@
 .info__items-list
   padding 0
   margin 0
+  margin-bottom 74px
   list-style none
 
 .info__differences-about
   font-family "Montserrat Regular", serif, Arial
   font-size 15px
-  color #555555
+  color $dark
   display flex
 
 .info__slider
@@ -18,8 +19,8 @@
 .info__checkbox
   width 15px
   height 15px
-  margin-right 15px
-  border 1px solid #c4c4c4
+  margin-right 10px
+  border 1px solid $grey2
   border-radius 2px
   box-sizing border-box
   position relative
@@ -42,30 +43,25 @@
     margin 0 auto
     box-sizing border-box
 
-  .info__items-list
-    padding-top 30px
-    display flex
-    justify-content space-between
+  .info__wrapper
+    padding-top 70px
+    margin-bottom 54px
+    overflow-x scroll
 
-  .info__slider
-    width 100%
-    height 10px
-    margin-bottom 50px
-    background-color #e4e4e4
-    display block
-    position relative
-
-    &::before
-      content ""
-      width 50%
-      max-width 500px
-      border-radius 3px
+    &::-webkit-scrollbar
       height 10px
-      background-color #7c2582
-      position absolute
-      left 0
-      top 0
+      background-color $grey
       cursor pointer
+
+    &::-webkit-scrollbar-thumb
+      height 10px
+      border-radius 5px
+      background-color $purple
+
+  .info__items-list
+    width 150%
+    margin-bottom 34px
+    display flex
 
   .info__differences-about
     margin-bottom 25px

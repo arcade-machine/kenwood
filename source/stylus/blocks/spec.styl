@@ -3,16 +3,19 @@
 
 .spec__wrapper
   padding 20px
-  border-top 1px solid #e4e4e4
+  border-top 1px solid $grey
 
   &:last-child
-    border-bottom 1px solid #e4e4e4
+    border-bottom 1px solid $grey
 
   &--open .spec__list
     display block
 
+  &--open
+    padding-bottom 10px
+
   &--open .spec__heading
-    margin-bottom 20px
+    margin-bottom 21px
 
   &--open .spec__heading::after
     transform rotate(180deg)
@@ -22,12 +25,6 @@
   margin 0
   list-style none
 
-.spec__column
-  display none
-
-  &:first-child
-      display block
-
 .spec__list
   margin 0
   padding 0
@@ -35,8 +32,8 @@
   list-style none
 
 .spec__item
-  padding 20px 0
-  border-top 1px solid #e4e4e4
+  padding 15px 20px
+  border-top 1px solid $grey
 
 .spec__heading
   padding 0
@@ -45,7 +42,7 @@
   font-family "Merriweather Regular", sans-serif, "Times New Roman"
   font-size 19px
   font-weight 400
-  color #0a0a0a
+  color $black
   position relative
 
   &::after
@@ -58,20 +55,20 @@
     right 0
     top 1px
 
-.spec__content
+.spec__info
   padding 0
   margin 0
-  margin-bottom 10px
+  margin-bottom 7px
   font-family "Merriweather Regular", sans-serif, "Times New Roman"
   font-size 15px
-  color #0a0a0a
+  color $black
 
 .spec__value
   padding 0
   margin 0
   font-family "Merriweather Regular", sans-serif, "Times New Roman"
   font-size 15px
-  color #555555
+  color $dark
 
 @media (min-width: $tablet)
   .spec
@@ -82,20 +79,39 @@
     box-sizing border-box
 
   .spec__wrapper
-    padding 20px 2%
+    padding 24px 0 20px 2%
+    overflow hidden
+
+    &--open .spec__heading
+      margin-bottom 24px
 
   .spec__content
+    width 150%
     display flex
-    justify-content space-between
+
+  .spec__heading
+    width fit-content
+    padding 0 32px 0 0
+    font-size 24px
+    display block
+    cursor pointer
+
+    &::after
+      top 5px
 
   .spec__column
     width 24%
+    margin-right 1%
     display block
 
+    &:last-child
+      margin-right 0
+
   .spec__item:hover
-    border-top 1px solid #477707
+    padding-top 14px
+    border-top 2px solid $green
     box-shadow 0 12px 18px 0 rgba(0, 0, 0, 0.06)
 
 @media (min-width: $desktop)
   .spec__wrapper
-    padding 20px 0
+    padding 24px 0 17px

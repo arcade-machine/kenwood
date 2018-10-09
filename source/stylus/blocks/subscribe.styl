@@ -8,8 +8,9 @@
   margin-bottom 20px
   font-family "Merriweather Regular", sans-serif, "Times New Roman"
   font-size 17px
+  line-height 26px
   font-weight 400
-  color #0a0a0a
+  color $black
   text-align center
 
 .subscribe__wrapper
@@ -20,16 +21,16 @@
   width 100%
   min-height 40px
   padding 0 13px
-  border 1px solid #c4c4c4
+  border 1px solid $grey2
   border-radius 5px
   box-sizing border-box
   font-family "Montserrat Regular", serif, Arial
   font-size 13px
   font-weight 400
-  color #0a0a0a
+  color $black
 
   &:placeholder
-    color #999999
+    color $grey3
 
 .subscribe__button
   width 40px
@@ -37,7 +38,7 @@
   padding 0
   border-radius 50%
   border none
-  background-color #7c2582
+  background-color $purple
   background-image url("../img/icons/button-icon.png")
   background-repeat no-repeat
   background-position 50% 50%
@@ -66,7 +67,7 @@
     font-size 19px
 
   .subscribe__form
-    width 49%
+    width 50%
 
   .subscribe__wrapper
     width 100%
@@ -96,4 +97,4 @@
 
 @media (min-width: $desktop)
   .subscribe
-    padding 0
+    padding 0 60px
